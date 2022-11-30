@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+h1 {
+  font-family: 'MyWebFont', Fallback, sans-serif;
+  background-image: url("./FotoKasteelOostmalle.jpeg");
+}
+
+.container ,.container2{
+  display: flex;
+  background-color: blue;
+}
+
+.item {
+  flex-grow: 1;
+  flex-shrink:1;
+}
+
+
+.container > * ,.container2 > *{
+  flex:1;
+}
+
+
+
+.container3 {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: auto;
+background-color: red;
+grid-template-areas:
+"div1 div2 . . . . . . ."
+
+}
+
+.item-a {
+grid-area: div1;
+}
+
+.item-b {
+grid-area: div2;
+}
+
+
+ @media only screen and (max-width: 768px) {
+   }
+   /* For mobile phones: */
+   .container {
+     flex-direction: column;
+   }

@@ -36,7 +36,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: auto;
 background-color: red;
 grid-template-areas:
-"div1 div2 . . . . . . ."
+"div1 div2 div3 . . . . . ."
 
 }
 
@@ -48,10 +48,20 @@ grid-area: div1;
 grid-area: div2;
 }
 
+.item-c {
+grid-area: div3;
+}
 
- @media only screen and (max-width: 768px) {
-   }
+
+ @media only screen and (max-width: 576px) {
+
    /* For mobile phones: */
    .container {
-     flex-direction: column;
+flex-direction: column;
+   }
+
+   img {
+     width: 50px;
+     height: 50px;
+   }
    }
